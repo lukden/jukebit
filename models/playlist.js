@@ -24,7 +24,7 @@ const playlistSchema = new Schema ({
   name: {
     type: String
   },
-  songs: [songSchema]
+  songs: [songSchema],
 })
 
 

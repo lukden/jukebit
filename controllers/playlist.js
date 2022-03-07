@@ -30,14 +30,29 @@ function index(req, res) {
 function show(req, res){
   Playlist.findById(req.params.id)
   .populate('songs')
-  .exec(function(error, playlist) {
-    Playlist.find({_id: {$nin: playlist.songs}}, function(error, songs) {
+  .exec(function(err, playlist) {
+    Playlist.find({_id: {$nin: playlist.songs}}, function(err, songs) {
       console.log(songs)
       res.render('playlists/show', {
         title: 'Playlist Details', 
         playlist: playlist,
-        songs: songs,
       }) 
+    })
+  })
+}
+
+function deletePlaylist(req, res) {
+  Playlist.findByIdAndDelete(req.params.id, function(err, playlist) {
+    res.redirect('/playlists')
+  })
+}
+
+function edit(req, res) {
+  Playlist.findById(req.params.id, function(err, playlist) {
+    res.render('playlists/edit', {
+      playlist,
+      err,
+      title: "Edit Playlist"
     })
   })
 }
@@ -69,5 +84,7 @@ export {
   show,
   update,
   addToPlaylist,
+  edit,
+  deletePlaylist as delete,
 }
 

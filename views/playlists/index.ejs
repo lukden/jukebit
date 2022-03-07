@@ -1,31 +1,32 @@
 <%- include('../partials/html-head') %>
+<link rel="stylesheet" href="/stylesheets/style.css" />
 <%- include('../partials/nav') %>
 
-<section>
-  <h1>Playlists! 🌮🌮🌮</h1>
-  <% if (user) { %>
-    <h2>Add a Playlist!</h2>
-    <form action="/playlists" method="POST">
-      <label>
-        Name:
-        <input type="text" name="name" autocomplete="off">
-      </label>
-      <label>
-        Song info
-        <input type="text" name="songs">
-      </label>
-      <button type="submit">Add Playlist</button>
-    </form>
-  <% } %>
-  <h2>All the Playlists!</h2>
-  <ul>
-    <% playlists.forEach(playlist => { %>
-      <li>
-        🌮 
-        <a href="/playlists/<%= playlist._id %>"><%= playlist.name %></a> 
-        <%= playlist.songs%></li>
-    <% }) %>
-  </ul>
-</section>
+<main>
+  <h1>Playlistttt</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>Song</th>
+        <th>Artist</th>
+        <th>Album</th>
+        <th>Release Date</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% playlists.ForEach(playlist = { %> 
+        <tr>
+          <td><%= playlist.name %></td>
+          <td><a href="/playlists/<%= playlist._id %>">Details</a></td>
+          <td>
+            <form action="/playlists/<%= playlist._id %>?_method=DELETE"method="POST">
+              <button>X</button>
+            </form>
+          </td>
+        </tr>
+        <% }) %>
+    </tbody>
+  </table>
+</main>
 
 <%- include('../partials/footer') %>

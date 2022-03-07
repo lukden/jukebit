@@ -1,11 +1,11 @@
 <%- include('../partials/html-head') %>
-<link rel="stylesheet" href="/stylesheets/flights/show.css" />
+<link rel="stylesheet" href="/stylesheets/style.css" />
 <%- include('../partials/nav') %>
 
 <main>
-  <h1><%= title %></h1>
+  <h1>Playlist</h1>
   <div>
-    <a href="/playlist/<%= playlist._id %>/edit">
+    <a href="/playlists/<%= playlist._id %>/edit">
       <button>Edit Playlist</button>
     </a>
   </div>
@@ -22,11 +22,11 @@
     <label for="songTitle">Song:</label>
     <input name="song" placeholder="song title">
     <label for="artist">Artist:</label>
-    <input type="string" name="artist">
+    <input name="artist">
     <label for="album">Album:</label>
-    <input type="string" name="album">
+    <input name="album">
     <label for="releaseYear">Release Date:</label>
-    <input type="date" name="releaseYear">
+    <input name="releaseYear">
     <button type="submit">Add Song</button>
   </form>
   <% if (playlist.songs.length) { %>

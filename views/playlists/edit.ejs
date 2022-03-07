@@ -1,7 +1,7 @@
 <%- include('../partials/html-head') %>
 <%- include('../partials/nav') %>
 
-<section>
+<main>
   <h1>Edit the Playlist! </h1>
   <form action="/playlists/<%= playlist._id %>?_method=PUT" method="POST">
     <label>
@@ -18,11 +18,11 @@
       <input 
         type="text" 
         name="songs"
-        <%= playlist.songs ? "checked" : "" %> 
+        <%= playlist.songs %> 
       >
     </label>
     <button type="submit">Edit the Playlist</button>
   </form>
-</section>
+</main>
 
 <%- include('../partials/footer') %>

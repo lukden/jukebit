@@ -5,7 +5,7 @@ import { fileURLToPath } from 'url'
 import createError from 'http-errors'
 import session from 'express-session'
 import logger from 'morgan'
-// import methodOverride from 'method-override'
+import methodOverride from 'method-override'
 import passport from 'passport'
 
 // connect to MongoDB with mongoose
@@ -30,7 +30,7 @@ app.set(
 app.set('view engine', 'ejs')
 
 // middleware
-// app.use(methodOverride('_method'))
+app.use(methodOverride('_method'))
 app.use(logger('dev'))
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
@@ -41,7 +41,7 @@ app.use(
 )
 
 app.use('/', indexRouter)
-app.use('/flights', playlistsRouter)
+app.use('/playlists', playlistsRouter)
 // session middleware
 app.use(
   session({
