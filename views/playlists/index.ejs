@@ -17,9 +17,11 @@
           <td><%= playlist.songs %></td>
           <td><a href="/playlists/<%= playlist._id %>">Details</a></td>
           <td>
+          <% if (user) { %>
             <form action="/playlists/<%= playlist._id %>?_method=DELETE"method="POST">
               <button>X</button>
             </form>
+            <% } %>
           </td>
         </tr>
         <% }) %>

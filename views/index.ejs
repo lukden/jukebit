@@ -2,9 +2,15 @@
 <%- include('./partials/nav') %>
 
 <main>
-  <h1><%= title %></h1>
-  <a href="/playlists/new">Add a Playlist!</a>
-  <a href="/playlists">Show me all the playlists!</a>
+  <h1>hello, <%= user ? user.profile.name : "friend" %></h1>
+  <% if (user?.profile.avatar) { %>
+    <div>
+      <img
+        src="<%= user.profile.avatar %>"
+        alt="<%= user.profile.name %> avatar"
+      />
+    </div>
+  <% } %>
 </main>
 
-<%- include("./partials/footer") %>
+<%- include('./partials/footer') %>
