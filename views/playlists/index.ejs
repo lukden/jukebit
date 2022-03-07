@@ -7,16 +7,14 @@
   <table>
     <thead>
       <tr>
-        <th>Song</th>
-        <th>Artist</th>
-        <th>Album</th>
-        <th>Release Date</th>
+        <th>Playlist</th>
       </tr>
     </thead>
     <tbody>
       <% playlists.forEach(playlist => { %> 
         <tr>
           <td><%= playlist.name %></td>
+          <td><%= playlist.songs %></td>
           <td><a href="/playlists/<%= playlist._id %>">Details</a></td>
           <td>
             <form action="/playlists/<%= playlist._id %>?_method=DELETE"method="POST">

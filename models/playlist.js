@@ -14,9 +14,6 @@ const songSchema = new Schema ({
   },
   releaseYear: {
     type: Date,
-    default: function() {
-      return new Date.now() + 365*24*60*60*1000
-    }
   }
 })
 
