@@ -14,7 +14,7 @@ const songSchema = new Schema ({
   },
   releaseYear: {
     type: Date,
-  }
+  },
 })
 
 const playlistSchema = new Schema ({
@@ -22,10 +22,10 @@ const playlistSchema = new Schema ({
     type: String
   },
   songs: [songSchema],
-  owner: {type: Schema.Types.ObjectId, ref: "Profile"}
+  owner: {
+    type: Schema.Types.ObjectId, ref: "Profile"
+  },
 })
-
-
 
 
 const Playlist = mongoose.model('Playlist', playlistSchema)

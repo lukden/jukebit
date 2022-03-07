@@ -74,10 +74,12 @@ function update(req, res) {
 
 function addToPlaylist(req, res) {
   Playlist.findById(req.params.id, function(err, playlist) {
+    playlist.owner = req.user.id
     playlist.songs.push(req.body)
     console.log("Updated Playlist", playlist)
     playlist.save(function(err) {
       res.redirect(`/playlists/${playlist._id}`)
+    
     })
   })
 }

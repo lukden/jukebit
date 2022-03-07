@@ -12,6 +12,16 @@
     </div>
   <% } %>
   <h1>It's <%= isSelf ? "you" : profile.name %>!</h1>
+  <h2>Bio: <%= profile.bio %></h2>
+  <form 
+    id="add-bio-form"
+    action="/profile/<%= profile._id %>/"
+    method="POST"
+  >
+    <label for="bio">Bio:</label>
+    <input name="bio">
+    <button type="submit">Add Bio</button>
+  </form>
 </main>
 
 <%- include('../partials/footer') %>

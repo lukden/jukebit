@@ -22,7 +22,7 @@ function show(req, res) {
       res.render("profiles/show", {
         title: `${profile.name}'s profile`,
         profile,
-        isSelf
+        isSelf,
       })
     })
   })
@@ -32,7 +32,20 @@ function show(req, res) {
   })
 }
 
+function addBio(req, res) {
+  Profile.findById(req.params.id, function(err, profile) {
+    profile.owner = req.user.id
+    profile.bio.push(req.body)
+    console.log("Updated Bio", profile)
+    profile.save(function(err) {
+      res.redirect(`/profiles/${profile._id}`)
+    
+    })
+  })
+}
+
 export {
   index,
   show,
+  addBio
 }
