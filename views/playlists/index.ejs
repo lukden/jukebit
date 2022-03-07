@@ -3,7 +3,7 @@
 <%- include('../partials/nav') %>
 
 <main>
-  <h1>Playlistttt</h1>
+  <h1><%= title %></h1>
   <table>
     <thead>
       <tr>
@@ -14,7 +14,7 @@
       </tr>
     </thead>
     <tbody>
-      <% playlists.ForEach(playlist = { %> 
+      <% playlists.forEach(playlist => { %> 
         <tr>
           <td><%= playlist.name %></td>
           <td><a href="/playlists/<%= playlist._id %>">Details</a></td>
