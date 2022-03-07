@@ -22,6 +22,7 @@ const playlistSchema = new Schema ({
     type: String
   },
   songs: [songSchema],
+  owner: {type: Schema.Types.ObjectId, ref: "Profile"}
 })
 
 

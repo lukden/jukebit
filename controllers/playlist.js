@@ -48,12 +48,17 @@ function deletePlaylist(req, res) {
 }
 
 function edit(req, res) {
-  Playlist.findById(req.params.id, function(err, playlist) {
+  Playlist.findById(req.params.id)
+  .then(playlist => {
     res.render('playlists/edit', {
       playlist,
       err,
       title: "Edit Playlist"
     })
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/playlists')
   })
 }
 
