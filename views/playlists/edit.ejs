@@ -1,0 +1,28 @@
+<%- include('../partials/html-head') %>
+<%- include('../partials/nav') %>
+
+<section>
+  <h1>Edit the Playlist! </h1>
+  <form action="/playlists/<%= playlist._id %>?_method=PUT" method="POST">
+    <label>
+      Name:
+      <input 
+        type="text" 
+        name="name" 
+        autocomplete="off"
+        value="<%= playlist.name %>"
+      >
+    </label>
+    <label>
+      Songs
+      <input 
+        type="text" 
+        name="songs"
+        <%= playlist.songs ? "checked" : "" %> 
+      >
+    </label>
+    <button type="submit">Edit the Playlist</button>
+  </form>
+</section>
+
+<%- include('../partials/footer') %>

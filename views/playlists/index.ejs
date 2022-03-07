@@ -1,0 +1,31 @@
+<%- include('../partials/html-head') %>
+<%- include('../partials/nav') %>
+
+<section>
+  <h1>Playlists! 🌮🌮🌮</h1>
+  <% if (user) { %>
+    <h2>Add a Playlist!</h2>
+    <form action="/playlists" method="POST">
+      <label>
+        Name:
+        <input type="text" name="name" autocomplete="off">
+      </label>
+      <label>
+        Song info
+        <input type="text" name="songs">
+      </label>
+      <button type="submit">Add Playlist</button>
+    </form>
+  <% } %>
+  <h2>All the Playlists!</h2>
+  <ul>
+    <% playlists.forEach(playlist => { %>
+      <li>
+        🌮 
+        <a href="/playlists/<%= playlist._id %>"><%= playlist.name %></a> 
+        <%= playlist.songs%></li>
+    <% }) %>
+  </ul>
+</section>
+
+<%- include('../partials/footer') %>

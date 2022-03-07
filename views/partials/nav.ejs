@@ -1,18 +1,11 @@
-  <% if (!user) { %>
-    <link rel="stylesheet" href="/stylesheets/siwg.css">
-  <% } %>
 </head>
 <body>
   <nav>
-    <% if (user) { %>
-      <a href="/auth/logout">
-        <button type="submit">Logout</button>
-      </a>
-    <% } else { %>
-      <a href="/auth/google" class="siwg-link">
-        <button type="submit" class="siwg">
-          <img id="siwg-image" alt="Sign in with Google" />
-        </button>
-      </a>
-    <% } %>
+		<i class="fas fa-film fa-2x"></i>
+    <a 
+      href="/playlists/new" <%- title === 'Add Playlist' ? 'class="active"' : '' %>
+    >ADD PLAYLIST</a>
+    <a 
+      href="/playlists" <%- title === 'All Playlists' ? 'class="active"' : '' %>
+    >ALL Playlists</a>
   </nav>

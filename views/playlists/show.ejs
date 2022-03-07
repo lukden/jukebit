@@ -1,0 +1,58 @@
+<%- include('../partials/html-head') %>
+<link rel="stylesheet" href="/stylesheets/flights/show.css" />
+<%- include('../partials/nav') %>
+
+<main>
+  <h1><%= title %></h1>
+  <div>
+    <a href="/playlist/<%= playlist._id %>/edit">
+      <button>Edit Playlist</button>
+    </a>
+  </div>
+  <section>
+    <div>Name: </div>
+    <div><%= playlist.name %></div>
+  </section>
+  <h2>Songs</h2>
+  <form 
+    id="add-song-form"
+    action="/playlists/<%= playlist._id %>/songs"
+    method="POST"
+  >
+    <label for="songTitle">Song:</label>
+    <input name="song" placeholder="song title">
+    <label for="artist">Artist:</label>
+    <input type="string" name="artist">
+    <label for="album">Album:</label>
+    <input type="string" name="album">
+    <label for="releaseYear">Release Date:</label>
+    <input type="date" name="releaseYear">
+    <button type="submit">Add Song</button>
+  </form>
+  <% if (playlist.songs.length) { %>
+    <table>
+      <thead>
+        <tr>
+          <th>Song</th>
+          <th>Artist</th>
+          <th>Album</th>
+          <th>Release Date</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% playlist.songs.forEach(function(song) { %>
+          <tr>
+            <td><%= song.songTitle %></td>
+            <td><%= song.artist %></td>
+            <td><%= song.album %></td>
+            <td><%= song.releaseYear %></td>
+          </tr>
+        <% }) %>
+      </tbody>
+    </table>
+  <% } else { %>
+    <h3>No songs Yet</h3>
+  <% } %>
+</main>
+  
+<%- include('../partials/footer') %>
