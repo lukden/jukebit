@@ -1,5 +1,5 @@
 <%- include('../partials/html-head') %>
-<link rel="stylesheet" href="/stylesheets/style.css" />
+<link rel="stylesheet" href="/stylesheets/playidx.css" />
 <%- include('../partials/nav') %>
 
 <main>
@@ -7,14 +7,13 @@
   <table>
     <thead>
       <tr>
-        <th>Playlist</th>
+        <th>Recent Playlists</th>
       </tr>
     </thead>
     <tbody>
       <% playlists.forEach(playlist => { %> 
         <tr>
           <td><%= playlist.name %></td>
-          <td><%= playlist.songs %></td>
           <td><a href="/playlists/<%= playlist._id %>">Details</a></td>
           <td>
           <% if (user) { %>
