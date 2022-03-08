@@ -17,7 +17,7 @@ html {
 }
 
 body {
-  background-image: url(../images/home/jukebit.gif);
+  background-image: url(../images/home/jukebitback.gif);
   background-size: cover;
   opacity: 0.95;
   /* Use a system font, if none are available use an available sans-sarif font */

@@ -17,7 +17,7 @@ router.post('/', playlistsCtrl.create)
 
 router.delete('/:id', playlistsCtrl.delete)
 
-router.get('/:id/edit', playlistsCtrl.edit)
+router.get('/:id/edit', isLoggedIn, playlistsCtrl.edit)
 
 router.put('/:id', playlistsCtrl.update)
 
