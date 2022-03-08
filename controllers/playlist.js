@@ -49,6 +49,7 @@ function deletePlaylist(req, res) {
 }
 
 function edit(req, res) {
+  req.body.owner = req.user.profile._id
   Playlist.findById(req.params.id)
   .then(playlist => {
     res.render('playlists/edit', {
@@ -65,6 +66,7 @@ function edit(req, res) {
 
 
 function update(req, res) {
+  req.body.owner = req.user.profile._id
   for (let key in req.body) {
     if (req.body[key] === '') delete req.body[key]
   }
@@ -74,13 +76,13 @@ function update(req, res) {
 }
 
 function addToPlaylist(req, res) {
+  req.body.owner = req.user.profile._id
   Playlist.findById(req.params.id, function(err, playlist) {
     playlist.owner = req.user.id
     playlist.songs.push(req.body)
     console.log("Updated Playlist", playlist)
     playlist.save(function(err) {
       res.redirect(`/playlists/${playlist._id}`)
-    
     })
   })
 }
@@ -95,4 +97,3 @@ export {
   edit,
   deletePlaylist as delete,
 }
-

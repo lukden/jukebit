@@ -21,6 +21,9 @@ const playlistSchema = new Schema ({
   name: {
     type: String
   },
+  description: {
+    type: String
+  },
   songs: [songSchema],
   owner: {
     type: Schema.Types.ObjectId, ref: "Profile"
