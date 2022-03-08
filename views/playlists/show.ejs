@@ -4,11 +4,13 @@
 
 <main>
   <h1>Playlist</h1>
+  <% if (playlist.owner !== (user?.profile._id)) { %>
   <div>
     <a href="/playlists/<%= playlist._id %>/edit">
     <button>Edit Playlist</button>
     </a>
   </div>
+  <% } %>
   <section>
     <div></div>
     <div><%= playlist.name %></div>
