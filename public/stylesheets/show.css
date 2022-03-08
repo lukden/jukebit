@@ -1,0 +1,28 @@
+div {
+  font-size: 3.5rem;
+}
+
+div,
+.btn {
+  display: flex;
+}
+
+label {
+  font-size: 2rem;
+  padding-left: 20px;
+  padding-right: 5px;
+}
+
+td{
+  font-size: 1.8rem;
+  padding-left: 20px;
+  padding-right: 10px;
+  padding-top: 5px;
+}
+
+th{
+  font-size: 1.6rem;
+  padding-left: 20px;
+  padding-right: 10px;
+  padding-top: 20px;
+}
