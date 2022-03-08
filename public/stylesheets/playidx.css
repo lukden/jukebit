@@ -1,3 +1,9 @@
+body{
+  background-image: url(../images/home/jukebitback.gif);
+  background-size: cover;
+  opacity: 0.95;
+}
+
 th {
   font-size: 2rem;
   text-align: center;
