@@ -52,7 +52,6 @@ function edit(req, res) {
   .then(playlist => {
     res.render('playlists/edit', {
       playlist,
-      err,
       title: "Edit Playlist"
     })
   })
@@ -61,6 +60,15 @@ function edit(req, res) {
     res.redirect('/playlists')
   })
 }
+// function edit(req, res) {
+//   Playlist.findById(req.params.id, function(err, playlist) {
+//     res.render('playlists/edit', {
+//       playlist,
+//       err,
+//       title: "Edit Playlist"
+//     })
+//   })
+// }
 
 
 function update(req, res) {
