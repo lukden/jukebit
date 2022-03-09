@@ -9,6 +9,7 @@ router.get("/", isLoggedIn, profilesCtrl.index)
 // GET - localhost:3000/profiles/:id
 router.get("/:id", isLoggedIn, profilesCtrl.show)
 
+router.get('/:id/edit', isLoggedIn, profilesCtrl.addBio)
 // POST - localhost:3000/profiles/:id/cats
 // router.post("/:id/cats", isLoggedIn, profilesCtrl.createCat)
 

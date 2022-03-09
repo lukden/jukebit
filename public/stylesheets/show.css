@@ -1,13 +1,19 @@
+body {
+  background-image: url(../images/home/jukeloop1.gif);
+  background-size: cover;
+  opacity: 0.95;
+}
+
 div {
   font-size: 3.5rem;
   background-color: rgb(207, 254, 254);
   margin: 5px 0px 20px 0px;
 }
 
-div,
+/* div,
 .btn {
   display: flex;
-}
+} */
 
 label {
   font-size: 2rem;
