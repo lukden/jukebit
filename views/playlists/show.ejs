@@ -3,7 +3,7 @@
 <link rel="stylesheet" href="/stylesheets/show.css"/>
 
 <main>
-  <h1>Playlist</h1>
+  <h1><%= playlist.name %></h1>
   <% if (playlist.owner.equals(user?.profile._id)) { %>
   <div>
     <a href="/playlists/<%= playlist._id %>/edit">
@@ -13,7 +13,6 @@
   <% } %>
   <section>
     <!-- <div></div> -->
-    <div><%= playlist.name %></div>
     <div><%= playlist.description %></div>
   </section>
   <h2>Songs</h2>
@@ -55,6 +54,13 @@
             <td><form class="down">
               <button type="yee">👎</button>
             </form></td>
+            <td>
+              <% if (playlist.owner.equals(user?.profile._id)) { %>
+            <form action="/playlists/<%= playlist._id %>/<%= playlist.songs %>?_method=DELETE"method="DELETE">
+              <button type="submit">X</button>
+            </form>
+              <% } %>
+            </td>
           </tr>
         <% }) %>
       </tbody>

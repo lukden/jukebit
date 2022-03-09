@@ -3,7 +3,7 @@
 <%- include('../partials/nav') %>
 
 <main>
-  <h1><%= title %></h1>
+  <h1 class="h1pidx"><%= title %></h1>
   <table>
     <thead>
       <tr>
@@ -17,7 +17,7 @@
           <td><%= playlist.description %></td>
           <td><a href="/playlists/<%= playlist._id %>">Details</a></td>
           <td>
-          <% if (user) { %>
+            <% if (playlist.owner.equals(user?.profile._id)) { %>
             <form action="/playlists/<%= playlist._id %>?_method=DELETE"method="POST">
               <button>X</button>
             </form>

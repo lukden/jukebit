@@ -15,13 +15,15 @@ router.get('/:id', playlistsCtrl.show)
 
 router.post('/', playlistsCtrl.create)
 
-router.delete('/:id', playlistsCtrl.delete)
+router.delete('/:id', isLoggedIn, playlistsCtrl.delete)
 
 router.get('/:id/edit', isLoggedIn, playlistsCtrl.edit)
 
-router.put('/:id', playlistsCtrl.update)
+// router.put('/:id', playlistsCtrl.update)
 
 router.post('/:id/songs', playlistsCtrl.addToPlaylist)
+
+router.put('/:id', playlistsCtrl.update)
 
 // router.put('/:id/up', (req, res) => {
 //   Playlist.findById(req.params.id).then((err, playlistsCtrl) => {

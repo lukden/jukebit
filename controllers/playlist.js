@@ -1,5 +1,6 @@
 import { Playlist } from "../models/playlist.js"
 
+
 function newPlaylist(req, res) {
   res.render('playlists/new', {
     title: 'Add Playlist',
@@ -23,7 +24,7 @@ function index(req, res) {
     res.render('playlists/index', {
       err: err,
       playlists: playlists,
-      title: 'All Playlists'
+      title: 'Playlists'
     })
   })
 }
@@ -47,6 +48,26 @@ function deletePlaylist(req, res) {
     res.redirect('/playlists')
   })
 }
+
+// function deleteSong(req, res) {
+//   Playlist.findByIdAndDelete(req.params.id, function(err, songs) {
+//     res.redirect(`/playlists/${playlist._id}`)
+//   })
+// }
+
+// function deleteSong(req, res) {
+//   Playlist.findById(req.params.id)
+//   .then(playlist => {
+//     if (playlist.owner.equals(req.user.profile._id)) {
+//       playlist.delete(playlist.songs)
+//       .then(() => {
+//         res.redirect(`/playlists/${playlist._id}`)
+//       })
+//     } else {
+//       throw new Error ("NOT AUTHORIZED")
+//     }
+//   })
+// }
 
 function edit(req, res) {
   Playlist.findById(req.params.id)

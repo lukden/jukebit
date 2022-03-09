@@ -15,6 +15,9 @@ const songSchema = new Schema ({
   releaseYear: {
     type: Date,
   },
+  owner: {
+    type: Schema.Types.ObjectId, ref: "Profile"
+  },
 }, {
   timestamps: true,
 })
@@ -41,5 +44,5 @@ const Playlist = mongoose.model('Playlist', playlistSchema)
 
 export {
   Playlist,
-  Song
+  Song,
 }
