@@ -22,13 +22,47 @@ table {
   margin: 5px 0px 10px 0px;
 }
 
+
+img {
+  display: flex;
+  width: 30px;
+  text-align: center;
+  align-content: center;
+  /* padding-bottom: 0px; */
+  margin-bottom: 10px;
+  border-radius: 50%;
+  margin: 7px 10px 0px 0px;
+}
+
 td {
   background-color: #77BA99;
   text-align: center;
   font-size: 1.6rem;
   font-weight: 600;
   border: 1px;
-  border-radius: 10%;
+  border-radius: 20%;
   padding: 5px 0px 12px 10px;
+}
+
+a {
+  display: flex;
+  margin: 7px 10px 0px 0px;
+  background-color: #EEEEFF;
+  padding: 5px;
+  border-radius: 10%;
+  color: rgb(18, 6, 26);
+  font-weight: 850;
+  font-size: 1.5rem;
+}
+
+button {
+  display: flex;
+  margin: 7px 10px 0px 0px;
+  border-radius: 10%;
+  background-color: rgb(234, 129, 255);
+  color: white;
+  font-weight: bold;
+  font-size: 1.8rem;
+  
 }
 

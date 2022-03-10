@@ -15,7 +15,7 @@
     <tbody>
       <% playlists.forEach(playlist => { %> 
         <tr>
-          <td><img src="<%= playlist.owner.avatar %>"></td>
+          <td class="avatar"><img src="<%= playlist.owner.avatar %>"></td>
           <td><%= playlist.name %></td>
           <td><%= playlist.description %></td>
           <td><a href="/playlists/<%= playlist._id %>">Details</a></td>
