@@ -20,8 +20,8 @@ a,
 
 label {
   font-size: 2rem;
-  background-color: #327A61;
-  color: white;
+  background-color: #c4fff4;
+  color: rgb(0, 0, 0);
   font-weight: bold;
   border: .5mm ridge #ceffee;
   border-radius: 8%;
@@ -29,36 +29,54 @@ label {
   margin: 0px 5px 5px 5px;
 }
 
+.add-song-form {
+  display: flex;
+  /* margin: 10px 10px 10px 10px; */
+  font-size: 1.2rem;
+  background-color: #89DCB9;
+  padding: 8px;
+  border: 1mm ridge rgb(194, 254, 250);
+  border-radius: 10%;
+}
+
 table, th, td {
   display: absolute;
-  margin: 10px 10px 10px 10px;
+  margin: 10px 20px 10px 20px;
   font-size: 1.6rem;
   background-color: #89DCB9;
-  padding: 10px 10px 20px 10px;
+  padding: 10px 10px 10px 10px;
   border: 1mm ridge rgb(194, 254, 250);
   border-radius: 10%;
   justify-content: center;
-}
+  width: 60%;
+} 
 
 th,
 #song-info {
   display: absolute;
   font-size: 1.6rem;
   background-color: #c4fff4;
-  padding-left: 20px;
-  padding-right: 10px;
+  /* padding-top: 0px; */
+  padding: 10px 10px 10px 10px; 
+  margin: 5px 10px 8px 10px;
+}
+
+td {
+  display: absolute;
+  text-align: center;
+  font-size: 1.6rem;
+  background-color: #c4fff4;
   padding-top: 0px;
-  margin: 5px 5px 8px 5px;
+  padding: 10px 10px 10px 10px; 
+  margin: 5px 10px 0px 10px;
 }
 
-
-
-
-
-
-
-h3 {
-  font-size: 1.3rem;
-}
-
-
+.delete-song {
+  display: flex;
+  margin: 0px 0px 0px 0px;
+  background-color: rgb(234, 129, 255);
+  color: white;
+  font-weight: bolder;
+  font-size: 1.8rem;
+  border-radius: 10%;
+} 

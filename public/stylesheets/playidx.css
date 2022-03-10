@@ -10,28 +10,26 @@ h1,
   text-align: center;
 }
 
-table {
+table, th, td {
   display: absolute;
   margin: 10px 10px 10px 10px;
   font-size: 1.6rem;
   background-color: #89DCB9;
-  padding: 10px 10px 20px 10px;
+  padding: 10px 10px 10px 10px;
   border: 1mm ridge rgb(194, 254, 250);
   border-radius: 10%;
   justify-content: center;
 }
 
-
-
-
-td {
-  background-color: #77BA99;
-  text-align: center;
+th,
+#play-item {
+  display: absolute;
   font-size: 1.6rem;
-  font-weight: 600;
-  border: 1px;
-  border-radius: 20%;
-  padding: 5px 0px 5px 10px;
+  background-color: #c4fff4;
+  padding-left: 20px;
+  padding-right: 10px;
+  padding-top: 0px;
+  margin: 5px 5px 8px 5px;
 }
 
 a,
@@ -40,7 +38,6 @@ a,
   margin: 7px 10px 0px 0px;
   background-color: #EEEEFF;
   padding: 5px;
-  border-radius: 10%;
   color: rgb(18, 6, 26);
   font-weight: 850;
   font-size: 1.5rem;
@@ -49,16 +46,13 @@ a,
 button,
 #delete {
   display: flex;
-  align-self: center;
-  justify-content: center;
-  margin: 0px 10px 0px 0px;
-  border-radius: 10%;
+  margin: 0px 0px 0px 0px;
   background-color: rgb(234, 129, 255);
   color: white;
-  font-weight: bold;
+  font-weight: bolder;
   font-size: 1.8rem;
-  
-}
+  border-radius: 10%;
+} 
 
 button,
 #username {
@@ -67,25 +61,25 @@ button,
   align-items: center;
   align-self: center; 
   justify-content: center; 
-  /* margin: 3px 10px 0px 0px; */
-  border-radius: 50%;
+  margin: 0px 0px 0px 0px;
+  border-radius: 50%; 
   background-color: rgb(234, 129, 255);
   color: white;
   font-weight: bold;
   font-size: 1.8rem; 
   width: 30px;
   height: 30px;
-  padding: 0px; 
+  padding: 0px;  
   
-}
+} 
 
 img {
   display: flex;
-  width: 30px;
-  /* align-content: center;  */
+  width: 40px; 
+  align-content: center; 
   justify-content: center;
   padding-bottom: 0px;
-  margin: 3px 10px 0px 0px;
+  margin: 0px 0px 0px 0px;
   border-radius: 50%; 
 }
 

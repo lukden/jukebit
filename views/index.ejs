@@ -2,7 +2,7 @@
 <%- include('./partials/nav') %>
 
 <main>
-  <h1>hello, <%= user ? user.profile.name : "friend" %></h1>
+  <h1>Welcome back, <%= user ? user.profile.name : "friend" %></h1>
   <h2>want to colloborate on playlists with people from around the around the world?</h2>
   <% if (user?.profile.avatar) { %>
     <div>

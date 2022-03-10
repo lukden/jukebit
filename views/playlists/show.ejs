@@ -12,7 +12,7 @@
   <% } %>
   <h2>Songs</h2>
   <form 
-    id="add-song-form"
+    class="add-song-form"
     action="/playlists/<%= playlist._id %>/songs"
     method="POST"
   >
@@ -43,16 +43,10 @@
             <td><%= song.artist %></td>
             <td><%= song.album %></td>
             <td><%= song.releaseYear %></td>
-            <td><form class="up">
-              <button type="yee">👍</button>
-            </form></td>
-            <td><form class="down">
-              <button type="yee">👎</button>
-            </form></td>
             <td>
               <% if (playlist.owner.equals(user?.profile._id)) { %>
             <form method="POST" action="/playlists/<%= playlist._id %>/<%= song._id%>?_method=DELETE">
-              <button type="submit">X</button>
+              <button class="delete-song" type="submit">X</button>
             </form>
               <% } %>
             </td>
