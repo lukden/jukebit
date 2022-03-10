@@ -56,7 +56,7 @@
             </form></td>
             <td>
               <% if (playlist.owner.equals(user?.profile._id)) { %>
-            <form action="/playlists/<%= playlist._id %>/<%= playlist.songs %>?_method=DELETE"method="DELETE">
+            <form method="POST" action="/playlists/<%= playlist._id %>/<%= song._id%>?_method=DELETE">
               <button type="submit">X</button>
             </form>
               <% } %>

@@ -55,19 +55,20 @@ function deletePlaylist(req, res) {
 //   })
 // }
 
-// function deleteSong(req, res) {
-//   Playlist.findById(req.params.id)
-//   .then(playlist => {
-//     if (playlist.owner.equals(req.user.profile._id)) {
-//       playlist.delete(playlist.songs)
-//       .then(() => {
-//         res.redirect(`/playlists/${playlist._id}`)
-//       })
-//     } else {
-//       throw new Error ("NOT AUTHORIZED")
-//     }
-//   })
-// }
+function deleteSong(req, res) {
+  Playlist.findById(req.params.id)
+  .then(playlist => {
+    playlist.songs.remove(req.params.songId)
+      playlist.save()
+      .then(() => {
+        res.redirect(`/playlists/${playlist._id}`)
+      })
+      .catch(err => {
+        console.log(err)
+        res.redirect(`/playlists/${playlist._id}`)
+      })
+    })
+}
 
 function edit(req, res) {
   Playlist.findById(req.params.id)
@@ -113,4 +114,5 @@ export {
   addToPlaylist,
   edit,
   deletePlaylist as delete,
+  deleteSong
 }

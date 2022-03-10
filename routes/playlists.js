@@ -2,7 +2,6 @@ import { Router } from 'express'
 const router = Router()
 import * as playlistsCtrl from '../controllers/playlist.js'
 import { isLoggedIn } from '../middleware/middleware.js'
-import { Playlist } from '../models/playlist.js'
 
 
 /* GET users listing. */
@@ -16,6 +15,8 @@ router.get('/:id', playlistsCtrl.show)
 router.post('/', playlistsCtrl.create)
 
 router.delete('/:id', isLoggedIn, playlistsCtrl.delete)
+
+router.delete('/:id/:songId', playlistsCtrl.deleteSong)
 
 router.get('/:id/edit', isLoggedIn, playlistsCtrl.edit)
 
