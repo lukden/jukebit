@@ -13,7 +13,7 @@ const songSchema = new Schema ({
     type: String
   },
   releaseYear: {
-    type: Date,
+    type: Number,
   },
   owner: {
     type: Schema.Types.ObjectId, ref: "Profile"

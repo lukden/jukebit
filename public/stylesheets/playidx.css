@@ -11,14 +11,14 @@ h1,
 }
 
 table {
-  background-color: #EEEEFF;
-  text-align: center;
-  font-size: 2rem;
-  font-weight: 800;
-  border: 1px;
-  border-radius: 7%;
-  padding: 10px 10px 10px 8px;
-  margin: 5px 0px 10px 0px;
+  display: absolute;
+  margin: 10px 10px 10px 10px;
+  font-size: 1.6rem;
+  background-color: #89DCB9;
+  padding: 10px 10px 20px 10px;
+  border: 1mm ridge rgb(194, 254, 250);
+  border-radius: 10%;
+  justify-content: center;
 }
 
 
@@ -34,7 +34,8 @@ td {
   padding: 5px 0px 5px 10px;
 }
 
-a {
+a,
+#details {
   display: flex;
   margin: 7px 10px 0px 0px;
   background-color: #EEEEFF;

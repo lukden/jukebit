@@ -20,7 +20,7 @@
           <td class="avatar"><button type="button" class="btn btn-secondary" id="username" data-bs-toggle="tooltip" data-bs-placement="left" title="<%= playlist.owner.name%>"><img src="<%= playlist.owner.avatar %>"></button></td>
           <td><%= playlist.name %></td>
           <td><%= playlist.description %></td>
-          <td><a href="/playlists/<%= playlist._id %>">Details</a></td>
+          <td><a href="/playlists/<%= playlist._id %>" id="details">Details</a></td>
           <td>
             <% if (playlist.owner.equals(user?.profile._id)) { %>
             <form action="/playlists/<%= playlist._id %>?_method=DELETE"method="POST">

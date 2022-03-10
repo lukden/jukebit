@@ -73,6 +73,22 @@ function deleteSong(req, res) {
     })
 }
 
+// const upVote = document.querySelector("#up-vote")
+// const downVote = document.querySelector("#down-vote")
+// const voteDisplay = document.querySelector(".vote-display")
+
+// upVote.addEventListener("click", function(){
+//   currentDisplay = voteDisplay.textContent;
+//   console.log(parseInt(currentDisplay) + 1)
+//   voteDisplay.textContent = `${parseInt(currentDisplay) + 1}`
+// })
+
+// downVote.addEventListener("click", function(){
+//   currentDisplay = voteDisplay.textContent;
+//   console.log(parseInt(currentDisplay) - 1)
+//   voteDisplay.textContent = `${parseInt(currentDisplay) - 1}`
+// })
+
 function edit(req, res) {
   Playlist.findById(req.params.id)
   .then(playlist => {

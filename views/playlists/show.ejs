@@ -4,17 +4,12 @@
 
 <main>
   <h1><%= playlist.name %></h1>
+  <div id="description-play"><%= playlist.description %></div>
   <% if (playlist.owner.equals(user?.profile._id)) { %>
-  <div>
-    <a href="/playlists/<%= playlist._id %>/edit">
+    <a id="edit-button" href="/playlists/<%= playlist._id %>/edit">
     <button>Edit Playlist</button>
     </a>
-  </div>
   <% } %>
-  <section>
-    <!-- <div></div> -->
-    <div><%= playlist.description %></div>
-  </section>
   <h2>Songs</h2>
   <form 
     id="add-song-form"
@@ -33,12 +28,12 @@
   </form>
   <% if (playlist.songs.length) { %>
     <table>
-      <thead>
+      <thead id="song-info">
         <tr>
           <th>Song</th>
           <th>Artist</th>
           <th>Album</th>
-          <th>Release Date</th>
+          <th>Year</th>
         </tr>
       </thead>
       <tbody>
