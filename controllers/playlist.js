@@ -20,9 +20,12 @@ function create(req,res) {
 }
 
 function index(req, res) {
-  Playlist.find({}, function (err, playlists) {
+  Playlist.find({})
+  .populate({
+    path: 'owner'
+  })
+  .then(playlists => {
     res.render('playlists/index', {
-      err: err,
       playlists: playlists,
       title: 'Playlists'
     })
