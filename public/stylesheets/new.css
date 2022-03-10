@@ -3,3 +3,40 @@ body {
   background-size: cover;
   opacity: 0.95;
 }
+
+form {
+  background-color: #0D3B66;
+  color: rgb(245, 250, 255);
+  padding: 50px;
+  font-size: 1.8rem;
+  font-weight: 800;
+  margin: 10px;
+  border-radius: 5%;
+  text-align: center;
+}
+
+input,
+.name {
+  width: 70%;
+  margin: 0px 0px 15px 0px;
+}
+
+/* label,
+.name {
+  margin: 10px 0px 10px 0px;
+} */
+
+input,
+.description {
+  width: 100%;
+  margin: 10px 0px 10px 0px;
+}
+
+input, 
+.new-playlist {
+  width: 30%;
+  margin: 10px 10px 0px 0px;
+  padding: 5px;
+  font-size: 1.8rem;
+  font-weight: bold;
+}

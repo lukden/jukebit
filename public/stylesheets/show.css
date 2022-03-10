@@ -5,15 +5,12 @@ body {
 }
 
 div {
-  font-size: 3.5rem;
+  font-size: 3.8rem;
   background-color: rgb(207, 254, 254);
-  margin: 5px 0px 20px 0px;
-}
+  margin: 5px 0px 5px 0px;
+} 
 
-/* div,
-.btn {
-  display: flex;
-} */
+
 
 label {
   font-size: 2rem;
@@ -39,5 +36,5 @@ th{
 }
 
 h3 {
-  font-size: 1.4rem;
+  font-size: 1.3rem;
 }
