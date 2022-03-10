@@ -12,36 +12,6 @@
     </div>
   <% } %>
   <h1>It's <%= isSelf ? "you" : profile.name %>!</h1>
-  <h2>Bio: <%= profile.bio %></h2>
-  <form 
-    id="add-bio-form"
-    action="/profile/<%= profile._id %>/bios"
-    method="POST"
-  >
-    <label for="bio">Bio:</label>
-    <input name="bio">
-    <button type="submit">Add Bio</button>
-  </form>
-  <% if (profile.bio.length) { %>
-    <table>
-      <thead>
-        <tr>
-          <th>
-            Bio
-          </th>
-        </tr>
-      </thead>
-      <tbody>
-        <% profile.bio.forEach(function(bio) { %>
-          <tr>
-            <td><%= profile.bio %></td>
-          </tr>
-        <% }) %>
-      </tbody>
-    </table>
-  <% } else { %>
-      <h3>No bio yet</h3>
-  <% } %>
 </main>
 
 <%- include('../partials/footer') %>
