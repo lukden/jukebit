@@ -20,35 +20,9 @@ router.delete('/:id/:songId', playlistsCtrl.deleteSong)
 
 router.get('/:id/edit', isLoggedIn, playlistsCtrl.edit)
 
-// router.put('/:id', playlistsCtrl.update)
-
 router.post('/:id/songs', playlistsCtrl.addToPlaylist)
 
 router.put('/:id', playlistsCtrl.update)
-
-// router.put('/:id/up', (req, res) => {
-//   Playlist.findById(req.params.id).then((err, playlistsCtrl) => {
-//     playlistsCtrl.upVote.push(req.user._id)
-//     playlistsCtrl.voteScore += 1
-//     playlistsCtrl.save()
-
-//     return res.status(200)
-//   })
-// })
-
-// router.put('/:id/down', (req, res) => {
-//   Playlist.findById(req.params.id).then((err, playlistsCtrl) => {
-//     playlistsCtrl.downVote.push(req.user._id)
-//     playlistsCtrl.voteScore -= 1
-//     playlistsCtrl.save()
-
-//     return res.status(200)
-//   })
-// })
-
-
-
-
 
 export {
   router
