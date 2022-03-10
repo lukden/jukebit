@@ -7,16 +7,30 @@ body{
 h1,
 .pidx {
   background-color:rgb(199, 255, 255);
-  opacity: 0.75;
+  opacity: 0.85;
   text-align: center;
+}
+
+table {
+  background-color:rgb(165, 255, 255);
+  opacity: 0.95;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 800;
+  border: 1px;
+  border-radius: 7%;
+  padding: 20px;
+  margin: 10px 0px 10px 0px;
 }
 
 td {
   background-color:rgb(165, 255, 255);
   opacity: 0.95;
   text-align: center;
-  font-size: 2rem;
+  font-size: 1.6rem;
   font-weight: 600;
   border: 1px;
-  border-radius: 50%;
+  border-radius: 10%;
+  padding: 20px 0px 0px 10px;
 }
+
