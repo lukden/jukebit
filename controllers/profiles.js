@@ -15,7 +15,6 @@ function index(req, res) {
 
 function show(req, res) {
   Profile.findById(req.params.id)
-  .populate('bio')
   .then(profile => {
     Profile.findById(req.user.profile._id)
     .then(self => {
@@ -33,18 +32,8 @@ function show(req, res) {
   })
 }
 
-function addBio(req, res) {
-  Profile.findById(req.params.id, function(err, profile) {
-    profile.bios.push(req.body)
-    console.log("Updated Bio", profile)
-    profile.save(function(err) {
-      res.redirect(`/profiles/${profile._id}`)
-    })
-  })
-}
 
 export {
   index,
   show,
-  addBio
 }

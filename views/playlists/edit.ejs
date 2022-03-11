@@ -1,28 +1,34 @@
+<link rel="stylesheet" href="/stylesheets/new.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alata&family=Reem+Kufi&family=Tourney&display=swap" rel="stylesheet">
 <%- include('../partials/html-head') %>
 <%- include('../partials/nav') %>
 
 <main>
-  <h1>Edit the Playlist! </h1>
+  <h1>Edit the Playlist!</h1>
   <form action="/playlists/<%= playlist._id %>?_method=PUT" method="POST">
-    <label>
+    <label class="edit-name">
       Name:
       <input 
         type="text" 
         name="name" 
+        class="edit-inp"
         autocomplete="off"
         value="<%= playlist.name %>"
       >
     </label>
-    <label>
+    <label class="edit-desc">
       Description:
       <input 
         type="text" 
-        name="description" 
+        name="description"
+        class="edit-desc-inp" 
         autocomplete="off"
         value="<%= playlist.description %>"
       >
     </label>
-    <button type="submit">Edit the Playlist</button>
+    <button type="submit" class="edit-btn">Edit the Playlist</button>
   </form>
 </main>
 

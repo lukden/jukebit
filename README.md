@@ -6,8 +6,8 @@
 Jukebit is a forum that encourages users to explore and share music. Users can create any playlist theme they can think of, and anyone can add songs they think fit the theme. Explore playlist themes to find one that suits your interests, no matter how niche they might be. 
 
 
-### Features 
-Jukebit uses Google OAUTH to enable users to login and access the full slate of features. Once logged in, users are about to create playlists, add songs, and view playlist owner information. Only the playlist owner is able to delete the playlists and songs attached to their ID, as well as and edit it's name and description. 
+## Features 
+Jukebit uses Google OAUTH to enable users to login and access the full slate of features. Once logged in, users are about to create playlists, add songs, and view playlist owner information. Only the playlist owner is able to delete the playlists and songs attached to their ID, as well as edit the name and description. 
 
 
 ## Check out Jukebit
@@ -18,17 +18,41 @@ View the wireframe, ERG, and pseudocode here: https://trello.com/b/1L394qlX/unit
 
 ## Screenshots 
 
-<img src ="https://i.imgur.com/Djj0ULg.jpg">
+### Deployed App
+
+<img src ="https://i.imgur.com/2uqyFNM.jpg">
 
 Playlist index page
 
-<img src ="https://i.imgur.com/v0Vv86R.jpg">
+<img src ="https://i.imgur.com/AsSeqX1.jpg">
 
 Add a new playlist
 
-<img src ="https://i.imgur.com/wZWzYqv.jpg">
+<img src ="https://i.imgur.com/YuzG5oL.jpg">
 
 Playlist details and add a song
+
+<img src ="https://i.imgur.com/6VgQGjQ.jpg">
+
+Home page
+
+<img src="https://i.imgur.com/HwCJoXD.jpg">
+
+Edit page
+
+### Wireframes and ERD 
+
+<img src="https://i.imgur.com/VpIYf9Z.png">
+
+ERD
+
+<img src="https://i.imgur.com/SecXvZT.png">
+
+Main page wireframe
+
+<img src="https://i.imgur.com/HJyfE09.png">
+
+Add song wireframe
 
 ## Technologies Used
 

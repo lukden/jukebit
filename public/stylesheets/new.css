@@ -26,6 +26,12 @@ form {
   font-size: 2.2rem;
   font-weight: bold;
   margin: auto;
+  padding: 5px;
+}
+
+.name-inp {
+  margin-left: 15px;
+  width: 80%;
 }
 
 label {
@@ -35,7 +41,7 @@ label {
   font-weight: bold;
   border: 1mm ridge #ceffee;
   border-radius: 8%;
-  padding-right: 20px;
+  /* padding-right: 20px; */
 }
 
 .description {
@@ -44,6 +50,14 @@ label {
   font-weight: bold;
   margin: auto;
   text-align: center;
+  padding: 5px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.desc-inp {
+  margin-left: 40px;
+  width: 100%;
 }
 
 .new-playlist {
@@ -54,3 +68,36 @@ label {
   text-align: center;
 }
 
+.edit-name {
+  display: flex;
+  width: 80%;
+  font-size: 2.2rem;
+  font-weight: bold;
+  margin: auto;
+  padding: 5px; 
+}
+
+.edit-desc {
+  display: flex;
+  font-size: 2.2rem;
+  font-weight: bold;
+  margin: auto;
+  text-align: center;
+  padding: 5px;
+  width: 100%;
+  margin: 5px;
+}
+
+.edit-desc-inp {
+  margin-left: 20px;
+  width: 70%;
+}
+
+.edit-inp {
+  margin-left: 20px;
+  width: 80%;
+}
+
+.edit-btn {
+  margin-left: 232px;
+}

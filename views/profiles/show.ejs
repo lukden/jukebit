@@ -12,35 +12,6 @@
     </div>
   <% } %>
   <h1><%= profile.name %></h1>
-  <form 
-    class="add-bio-form"
-    action="/profile/<%= profile._id %>/bios"
-    method="POST"
-  >
-  <label for="bio">Song</label>
-  <input type="text" name="bio">
-  <button type="submit">Add Bio</button>
-  </form>
-  <% if (profile.bios.length) { %>
-    <table>
-      <thead>
-        <tr>
-          <th>
-            Bio
-          </th>
-        </tr>
-      </thead>
-      <tbody>
-        <% profile.bios.forEach(function(bio) { %>
-          <tr>
-            <td><%= bio.biography %></td>
-          </tr>
-        <% }) %>
-      </tbody>
-    </table>
-    <% } else { %>
-    <h2>No bio yet</h2>
-  <% } %>
 </main>
 
 <%- include('../partials/footer') %>
