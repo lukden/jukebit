@@ -9,12 +9,17 @@ h1,
   background-color: #322f25;
   color: #ffffff;
   text-align: center;
+  box-shadow: 4px 4px rgb(36, 36, 20);
+}
+
+table {
+  box-shadow: 3px 3px rgb(1, 45, 38);
 }
 
 table, th, td {
   display: absolute;
   font-family: 'Alata', sans-serif;
-  margin: 10px 10px 10px 10px;
+  margin: auto;
   font-size: 1.6rem;
   font-weight: 500;
   background-color: #89DCB9;
@@ -22,6 +27,7 @@ table, th, td {
   border: 1mm ridge rgb(194, 254, 250);
   border-radius: 10%;
   justify-content: center;
+  box-shadow: 1px 1px rgb(2, 69, 57);
 }
 
 th,
@@ -38,18 +44,19 @@ th,
 
 .details {
   display: flex;
-  margin: 0px 0px 0px 0px;
+  margin: auto;
   background-color: #EEEEFF;
   padding: 5px;
   color: rgb(18, 6, 26);
   font-weight: 850;
   font-size: 1.5rem;
+  border: 1mm ridge rgb(225, 255, 253);
+  border-radius: 10%;
 }
 
 button,
 #delete {
   display: flex;
-  margin: 0px 0px 0px 0px;
   background-color: rgb(234, 129, 255);
   color: white;
   font-weight: bolder;
@@ -85,5 +92,28 @@ img {
   padding-bottom: 0px;
   margin: 0px 0px 0px 0px;
   border-radius: 50%; 
+}
+
+h2 {
+  font-size: 2rem;
+  font-family: 'Alata', sans-serif;
+  background-color: #ffffff;;
+  margin: 0px 0px 10px 0px;
+  padding: 0px 8px 5px 8px;
+  border: 1mm ridge #ceffee;
+  border-radius: 10%; 
+  box-shadow: 5px 5px rgb(2, 69, 57);
+}
+
+.profile-avatar {
+  display: absolute;
+  width: 100px; 
+  align-content: center; 
+  justify-content: center;
+  padding-bottom: 0px;
+  margin: 0px 0px 20px 0px;
+  border-radius: 50%; 
+  border: 1mm ridge #ceffee;
+  box-shadow: 1px 1px rgb(2, 69, 57);
 }
 

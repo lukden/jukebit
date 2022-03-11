@@ -35,7 +35,7 @@ function show(req, res) {
 
 function addBio(req, res) {
   Profile.findById(req.params.id, function(err, profile) {
-    profile.bio.push(req.body)
+    profile.bios.push(req.body)
     console.log("Updated Bio", profile)
     profile.save(function(err) {
       res.redirect(`/profiles/${profile._id}`)

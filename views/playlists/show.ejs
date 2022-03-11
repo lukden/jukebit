@@ -7,7 +7,7 @@
 
 <main>
   <h1><%= playlist.name %></h1>
-  <div id="description-play"><%= playlist.description %></div>
+  <div class="description-play"><%= playlist.description %></div>
   <% if (playlist.owner.equals(user?.profile._id)) { %>
     <a id="edit-button" href="/playlists/<%= playlist._id %>/edit">
     <button>Edit Playlist</button>
@@ -25,7 +25,7 @@
     <label for="album">Album</label>
     <input name="album"
     class="add-song-inp">
-    <label for="releaseYear">Release Date</label>
+    <label for="releaseYear">Year</label>
     <input name="releaseYear" class="add-song-inp">
     <button type="submit">Add Song</button>
   </form>

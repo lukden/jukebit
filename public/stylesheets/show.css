@@ -3,13 +3,19 @@ body {
   background-size: cover;
 }
 
-div,
-#description-play {
-  font-size: 2.2rem;
+h1 {
+  margin: 25px 0px 10px 0px;
+  box-shadow: 4px 4px rgb(36, 36, 20);
+}
+
+.description-play {
+  font-size: 2rem;
   font-family: 'Alata', sans-serif;
   background-color: #ffffff;;
   margin: 0px 0px 10px 0px;
-  padding: 5px 8px 5px 8px;
+  padding: 0px 8px 5px 8px;
+  border: 1mm ridge #ceffee;
+  border-radius: 10%;
 } 
 
 a,
@@ -39,10 +45,16 @@ label {
   padding: 8px;
   border: 1mm ridge rgb(194, 254, 250);
   border-radius: 10%;
+  box-shadow: 3px 3px rgb(1, 45, 38);
 }
 
 .add-song-inp {
   font-size: 1.2rem;
+  margin: 5px;
+}
+
+table {
+  box-shadow: 3px 3px rgb(1, 45, 38);
 }
 
 table, th, td {
@@ -56,17 +68,8 @@ table, th, td {
   border-radius: 10%;
   justify-content: center;
   width: 60%;
+  box-shadow: 1px 1px rgb(2, 69, 57);
 } 
-
-th,
-#song-info {
-  display: absolute;
-  font-size: 1.6rem;
-  background-color: #c4fff4;
-  /* padding-top: 0px; */
-  padding: 10px 10px 10px 10px; 
-  margin: 5px 10px 8px 10px;
-}
 
 td {
   display: absolute;
@@ -75,7 +78,7 @@ td {
   background-color: #c4fff4;
   padding-top: 0px;
   padding: 10px 10px 10px 10px; 
-  margin: 5px 10px 0px 10px;
+  margin: 5px 10px 8px 10px;
 }
 
 .delete-song {

@@ -52,8 +52,6 @@ nav {
   display: flex;
   justify-content: center;
   width: 100%;
-  padding-top: 0px;
-  margin-bottom: 0px;
 }
 
 .add-playlist {
@@ -67,6 +65,7 @@ nav {
   font-weight: bolder;
   border: 1mm ridge rgb(216, 255, 252);
   border-radius: 10%;
+  box-shadow: 3px 3px rgb(1, 45, 38);
 }
 
 p { 
@@ -75,6 +74,7 @@ p {
   font-size: 4rem;
   margin: auto;
   font-family: 'Tourney', cursive;
+  text-shadow: 0.5px 0.5px rgb(1, 45, 38);
 }
 
 .all-playlists {
@@ -88,6 +88,7 @@ p {
   font-weight: bolder;
   border: 1mm ridge rgb(217, 255, 252);
   border-radius: 10%;
+  box-shadow: 3px 3px rgb(1, 45, 38);
 }
 
 .logout {
@@ -100,6 +101,7 @@ p {
   font-weight: bolder;
   border: 1mm ridge rgb(213, 255, 252);
   border-radius: 10%;
+  box-shadow: 3px 3px rgb(1, 45, 38);
 }
 
 .profile {
@@ -113,6 +115,7 @@ p {
   font-weight: bolder;
   border: 1mm ridge rgb(209, 255, 252);
   border-radius: 10%;
+  box-shadow: 3px 3px rgb(1, 45, 38);
 }
 
 /* nav {
