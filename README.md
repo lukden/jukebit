@@ -7,14 +7,14 @@ Jukebit is a forum that encourages users to explore and share music. Users can c
 
 
 ## Features 
-Jukebit uses Google OAUTH to enable users to login and access the full slate of features. Once logged in, users are about to create playlists, add songs, and view playlist owner information. Only the playlist owner is able to delete the playlists and songs attached to their ID, as well as edit the name and description. 
+Jukebit uses Google OAUTH to enable users to login and access the full slate of features. Once logged in, users are about to create playlists, add songs, and view playlist owner information. Only the playlist owner is able to delete the playlists and songs attached to their playlists, as well as edit the name and description. 
 
 
 ## Check out Jukebit
 
 Click the link to view the game: https://jukebit.herokuapp.com/
 
-View the wireframe, ERG, and pseudocode here: https://trello.com/b/1L394qlX/unit-2-project
+View the wireframe, ERD, and pseudocode here: https://trello.com/b/1L394qlX/unit-2-project
 
 ## Screenshots 
 
@@ -66,6 +66,7 @@ Add song wireframe
 <li>Mongoose</li>
 <li>Google OAUTH</li>
 <li>Bootstrap</li>
+<li>Heroku</li>
 <li>Adobe Media Encoder</li>
 </ul>
 
