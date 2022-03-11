@@ -5,6 +5,7 @@
   width: 191px;
   height: 40px;
   /* margin: 0px 250px 20px 0px; */
+  padding: 5px;
 }
 
 .siwg-link {
@@ -43,6 +44,75 @@
   padding: 0;
   position: absolute;
   width: 1px;
+}
+
+
+nav {
+  background-color: #E7EEF8; 
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding-top: 0px;
+  margin-bottom: 0px;
+}
+
+.add-playlist {
+  display: absolute;
+  margin: 10px 170px 10px 10px;
+  padding: 5px;
+  font-family: 'Reem Kufi', sans-serif;
+  font-size: 1.8rem;
+  background-color: #B6F0E3;
+  color: rgb(0, 0, 0);
+  font-weight: bolder;
+  border: 1mm ridge rgb(216, 255, 252);
+  border-radius: 10%;
+}
+
+p { 
+  display: absolute;
+  text-align: center;
+  font-size: 4rem;
+  margin: auto;
+  font-family: 'Tourney', cursive;
+}
+
+.all-playlists {
+  display: absolute;
+  margin: 10px 30px 10px 0px;
+  padding: 5px;
+  font-family: 'Reem Kufi', sans-serif;
+  font-size: 1.8rem;
+  background-color: #B6F0E3;
+  color: rgb(0, 0, 0);
+  font-weight: bolder;
+  border: 1mm ridge rgb(217, 255, 252);
+  border-radius: 10%;
+}
+
+.logout {
+  display: absolute;
+  margin: 10px 30px 10px 0px;
+  font-size: 1.8rem;  
+  padding: 5px;
+  background-color: #B6F0E3;
+  color: rgb(0, 0, 0);
+  font-weight: bolder;
+  border: 1mm ridge rgb(213, 255, 252);
+  border-radius: 10%;
+}
+
+.profile {
+  display: flex;
+  margin: 10px 10px 10px 0px;
+  padding: 5px;
+  font-family: 'Reem Kufi', sans-serif;
+  font-size: 1.8rem;
+  background-color: #B6F0E3;
+  color: rgb(0, 0, 0);
+  font-weight: bolder;
+  border: 1mm ridge rgb(209, 255, 252);
+  border-radius: 10%;
 }
 
 /* nav {

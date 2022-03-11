@@ -1,6 +1,9 @@
 <%- include('../partials/html-head') %>
 <%- include('../partials/nav') %>
 <link rel="stylesheet" href="/stylesheets/show.css"/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alata&family=Reem+Kufi&family=Tourney&display=swap" rel="stylesheet">
 
 <main>
   <h1><%= playlist.name %></h1>
@@ -10,20 +13,20 @@
     <button>Edit Playlist</button>
     </a>
   <% } %>
-  <h2>Songs</h2>
   <form 
     class="add-song-form"
     action="/playlists/<%= playlist._id %>/songs"
     method="POST"
   >
-    <label for="songTitle">Song:</label>
-    <input name="songTitle">
-    <label for="artist">Artist:</label>
-    <input name="artist">
-    <label for="album">Album:</label>
-    <input name="album">
-    <label for="releaseYear">Release Date:</label>
-    <input name="releaseYear">
+    <label for="songTitle">Song</label>
+    <input name="songTitle" class="add-song-inp">
+    <label for="artist">Artist</label>
+    <input name="artist" class="add-song-inp">
+    <label for="album">Album</label>
+    <input name="album"
+    class="add-song-inp">
+    <label for="releaseYear">Release Date</label>
+    <input name="releaseYear" class="add-song-inp">
     <button type="submit">Add Song</button>
   </form>
   <% if (playlist.songs.length) { %>

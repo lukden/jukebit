@@ -1,13 +1,13 @@
 body {
   background-image: url(../images/home/jukeloop1.gif);
   background-size: cover;
-  opacity: 0.95;
 }
 
 div,
 #description-play {
   font-size: 2.2rem;
-  background-color: rgb(176, 255, 188);
+  font-family: 'Alata', sans-serif;
+  background-color: #ffffff;;
   margin: 0px 0px 10px 0px;
   padding: 5px 8px 5px 8px;
 } 
@@ -16,6 +16,7 @@ a,
 #edit-button {
   margin: 0px 0px 10px 0px;
   padding: 0px;
+  background-color: aliceblue;
 }
 
 label {
@@ -23,14 +24,15 @@ label {
   background-color: #c4fff4;
   color: rgb(0, 0, 0);
   font-weight: bold;
-  border: .5mm ridge #ceffee;
+  border: 1mm ridge #ceffee;
   border-radius: 8%;
-  padding: 3px 5px 3px 5px;
+  padding: 0px 4px 0px 4px;
   margin: 0px 5px 5px 5px;
 }
 
 .add-song-form {
   display: flex;
+  font-family: 'Alata', sans-serif;
   /* margin: 10px 10px 10px 10px; */
   font-size: 1.2rem;
   background-color: #89DCB9;
@@ -39,9 +41,14 @@ label {
   border-radius: 10%;
 }
 
+.add-song-inp {
+  font-size: 1.2rem;
+}
+
 table, th, td {
   display: absolute;
   margin: 10px 20px 10px 20px;
+  font-family: 'Reem Kufi', sans-serif;
   font-size: 1.6rem;
   background-color: #89DCB9;
   padding: 10px 10px 10px 10px;
