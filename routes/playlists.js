@@ -6,7 +6,7 @@ import { isLoggedIn } from '../middleware/middleware.js'
 
 /* GET users listing. */
 
-router.get('/new', playlistsCtrl.new)
+router.get('/new', isLoggedIn, playlistsCtrl.new)
 
 router.get('/', playlistsCtrl.index)
 
@@ -16,13 +16,13 @@ router.post('/', playlistsCtrl.create)
 
 router.delete('/:id', isLoggedIn, playlistsCtrl.delete)
 
-router.delete('/:id/:songId', playlistsCtrl.deleteSong)
+router.delete('/:id/:songId', isLoggedIn, playlistsCtrl.deleteSong)
 
 router.get('/:id/edit', isLoggedIn, playlistsCtrl.edit)
 
-router.post('/:id/songs', playlistsCtrl.addToPlaylist)
+router.post('/:id/songs', isLoggedIn, playlistsCtrl.addToPlaylist)
 
-router.put('/:id', playlistsCtrl.update)
+router.put('/:id', isLoggedIn, playlistsCtrl.update)
 
 export {
   router

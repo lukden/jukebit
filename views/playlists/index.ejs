@@ -16,7 +16,6 @@
         <th>Title</th>
         <th>Description</th>
         <th></th>
-        <th></th>
       </tr>
     </thead>
     <tbody>
@@ -28,13 +27,13 @@
           <td><%= playlist.name %></td>
           <td><%= playlist.description %></td>
           <td><a href="/playlists/<%= playlist._id %>" class="details">Details</a></td>
-          <td>
             <% if (playlist.owner.equals(user?.profile._id)) { %>
+          <td>
             <form action="/playlists/<%= playlist._id %>?_method=DELETE"method="POST">
               <button id="delete">X</button>
             </form>
-            <% } %>
           </td>
+            <% } %>
         </tr>
         <% }) %>
     </tbody>

@@ -76,7 +76,6 @@ function edit(req, res) {
     })
   })
   .catch(err => {
-    console.log(err)
     res.redirect('/playlists')
   })
 }
@@ -95,7 +94,6 @@ function update(req, res) {
 function addToPlaylist(req, res) {
   Playlist.findById(req.params.id, function(err, playlist) {
     playlist.songs.push(req.body)
-    console.log("Updated Playlist", playlist)
     playlist.save(function(err) {
       res.redirect(`/playlists/${playlist._id}`)
     })
